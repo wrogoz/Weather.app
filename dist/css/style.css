@@ -1,0 +1,30 @@
+.city_name__box {
+  margin-top: 3%; }
+
+h2 {
+  text-align: center; }
+
+.app_name {
+  margin-top: 3%; }
+  .app_name h1 {
+    text-align: center; }
+
+.input_col {
+  display: flex;
+  justify-content: center; }
+  .input_col label {
+    position: absolute;
+    top: 0.65rem;
+    left: 55px; }
+  .input_col #inputLGEx {
+    text-align: center; }
+
+.input_col {
+  display: flex;
+  justify-content: center; }
+  .input_col label {
+    position: absolute;
+    top: 0.65rem;
+    left: 55px; }
+  .input_col #inputLGEx {
+    text-align: center; }

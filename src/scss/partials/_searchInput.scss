@@ -1,0 +1,12 @@
+.input_col{
+    @include center;
+    label{
+        position: absolute;
+        top: 0.65rem;
+        left: 55px;
+    }
+    
+    #inputLGEx{
+        text-align: center;
+    }
+}
