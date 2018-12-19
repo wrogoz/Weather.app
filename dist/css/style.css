@@ -4,12 +4,11 @@
 h2 {
   text-align: center; }
 
-.app_name {
-  margin-top: 3%; }
-  .app_name h1 {
-    text-align: center; }
+.app_name h1 {
+  text-align: center; }
 
 .input_col {
+  padding-top: 10px;
   display: flex;
   justify-content: center; }
   .input_col label {
@@ -20,6 +19,7 @@ h2 {
     text-align: center; }
 
 .input_col {
+  padding-top: 10px;
   display: flex;
   justify-content: center; }
   .input_col label {

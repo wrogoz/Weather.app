@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Wheather App.</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
@@ -24,7 +25,7 @@
     <!-- row 1-->
     <div class="row city_name__box">
         <div class="col-sm-12" id='city_col'>
-            <h2>City name</h2>
+            <h2 class="animated" id="city-name">City name</h2>
         </div>
     </div>
 
@@ -41,7 +42,7 @@
                 <div class="card-body">
             
                     <!-- Title -->
-                    <h4 class="card-title">POGODA DZIEŃ</h4>
+                    <h4 class="card-title" id='this-day'>POGODA DZIEŃ</h4>
 
 
                 </div>
@@ -87,12 +88,7 @@
         </div>
 
     </div>
-    <!-- row app Name-->
-    <div class="row">
-        <div class="col-sm-12 app_name">
-            <h1>Wheather App.</h1>
-        </div>
-    </div>
+    
     <!-- row input-->
     <div class="row">
         <div class="col-12 input_col">
@@ -100,6 +96,14 @@
                 <input type="text" id="inputLGEx" class="form-control form-control-lg">
                 <label for="inputLGEx">Enter city name </label>
             </div>
+        </div>
+    </div>
+
+
+    <!-- row app Name-->
+    <div class="row">
+        <div class="col-sm-12 app_name">
+            <h1>Wheather App.</h1>
         </div>
     </div>
 

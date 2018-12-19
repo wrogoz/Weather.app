@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("\n\nvar input = $('#inputLGEx');\nvar thisDay = $('#this-day');\nvar cityName = $('#city-name');\ninput.keypress(function (e) {\n    if (e.which == 13) {\n        var weatherbit = 'https://api.weatherbit.io/v2.0/current?city=' + input.val() + '&key=7e5cfb6fc82247268e54b66455f03017';\n        $.ajax({\n            url: weatherbit,\n\n            method: 'GET'\n\n        }).done(function (resp) {\n            thisDay.text(' temp: ' + resp.data[0].temp + ' C');\n            cityName.addClass('fadeOutUp');\n            setTimeout(function () {\n                cityName.text('' + resp.data[0].city_name);\n                cityName.addClass('fadeInUpBig');\n                setTimeout(function () {\n                    input.val(\"\");\n                }, 500);\n            }, 1000);\n            setTimeout(function () {\n                cityName.removeClass('fadeInUpBig');\n                cityName.removeClass('fadeOutUp');\n            }, 2000);\n        }).fail(function (err) {\n            console.log('error');\n        });\n    }\n});\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ })
 
