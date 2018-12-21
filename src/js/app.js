@@ -41,7 +41,7 @@ input.keypress(function (e) {
 
             //tommorow wheather
 
-        let weatherNextDay = `https://api.weatherbit.io/v2.0/forecast/daily?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017&days=2`;
+        let weatherNextDay = `https://api.weatherbit.io/v2.0/forecast/daily?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017&days=1`;
         $.ajax({
             url: weatherNextDay
             ,
