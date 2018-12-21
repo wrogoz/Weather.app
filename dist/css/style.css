@@ -6,6 +6,9 @@ h2 {
 
 .card {
   height: 340px; }
+  .card .card-img-top {
+    height: 80%;
+    padding: 5%; }
 
 .app_name h1 {
   text-align: center; }

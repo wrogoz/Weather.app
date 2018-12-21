@@ -24,14 +24,14 @@ input.keypress(function (e) {
             cityName.addClass('fadeOutUp');
             setTimeout(function () {
                 cityName.text(`${resp.data[0].city_name}`);
-                cityName.addClass('fadeInUp');
+                cityName.addClass('fadeInUpBig');
                 setTimeout(function () {
                     input.val("");
                 }, 500);
                 
             }, 1000);
             setTimeout(function() {
-                cityName.removeClass('fadeInUp');
+                cityName.removeClass('fadeInUpBig');
                 cityName.removeClass('fadeOutUp');
             }, 2000);
             
@@ -41,9 +41,9 @@ input.keypress(function (e) {
 
             //tommorow wheather
 
-        let weatherNextDay = `https://api.weatherbit.io/v2.0/forecast/daily?city=${input.val()}&key=&key=7e5cfb6fc82247268e54b66455f03017&days=2`;
+        let weatherNextDay = `https://api.weatherbit.io/v2.0/forecast/daily?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017&days=2`;
         $.ajax({
-            url: weatherbit
+            url: weatherNextDay
             ,
             method: 'GET'
 
