@@ -64,10 +64,10 @@ input.keypress(function (e) {
             method: 'GET'
 
         }).done((resp) => {
-            afterTommorowDay.text(` Pojutrze: ${resp.data[0].temp} C`);
+            afterTommorowDay.text(` Jutro: ${resp.data[0].temp} C`);
             afterTommorowDayImg.attr('src', `src/images/${resp.data[0].weather.icon}.svg`)
         }).fail((err) => {
-            console.log('next day forecast error');
+            console.log('after next day forecast error');
         })
 
     }
