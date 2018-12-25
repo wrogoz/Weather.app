@@ -55,17 +55,18 @@ input.keypress(function (e) {
         }).fail((err)=>{
             console.log('next day forecast error');
         })
-        //after tommorow weather
+        //day after tommorow weather
 
-        let weatherafterTommorow = `https://api.weatherbit.io/v2.0/forecast/daily?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017&days=2`;
+        let afterTommorow = `https://api.weatherbit.io/v2.0/forecast/daily?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017&days=2`;
         $.ajax({
-            url: weatherafterTommorow
+            url: afterTommorow
             ,
             method: 'GET'
 
         }).done((resp) => {
-            afterTommorowDay.text(` Jutro: ${resp.data[0].temp} C`);
-            afterTommorowDayImg.attr('src', `src/images/${resp.data[0].weather.icon}.svg`)
+            console.log(resp)
+            afterTommorowDay.text(` Jutro: ${resp.data[1].temp} C`);
+            afterTommorowDayImg.attr('src', `src/images/${resp.data[1].weather.icon}.svg`)
         }).fail((err) => {
             console.log('after next day forecast error');
         })
