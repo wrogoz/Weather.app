@@ -7301,7 +7301,8 @@ body.scrollable {
     .md-form textarea.md-textarea.form-control-sm:focus.invalid + label:after {
       top: 3.1rem; }
   .md-form .was-validated input[type=text]:valid + label {
-    color: #00c851 !important; }
+    
+   }
   .md-form .was-validated input[type=text]:invalid + label {
     color: #f44336 !important; }
   .md-form .was-validated .form-control:valid:focus {

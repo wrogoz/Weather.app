@@ -1,3 +1,11 @@
+@import 'modules/variables';
+.md-form input[type=text]:focus:not([readonly]){
+border-bottom: 1px solid $primary;
+box-shadow: 0 1px 0 0 $primary;
+}
+.md-form input[type=text]:focus:not([readonly])+label{
+  color: $primary ;
+}
 .input_col{
     padding-top:10px;
     @include center;
@@ -5,7 +13,12 @@
         position: absolute;
         top: 0.65rem;
         left: 55px;
+       
     }
+    label.active{
+      
+    }
+   
     
     #inputLGEx{
         text-align: center;

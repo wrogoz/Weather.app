@@ -21,7 +21,7 @@ input.keypress(function (e) {
             method: 'GET'
 
         }).done((resp) => {
-            thisDay.text(` Dziś: ${resp.data[0].temp} C`);
+            thisDay.text(`  ${resp.data[0].temp} C`);
             thisDayImg.attr('src', `src/images/${resp.data[0].weather.icon}.svg`)
             cityName.addClass('fadeOutUp');
             setTimeout(function () {
@@ -50,7 +50,7 @@ input.keypress(function (e) {
             method: 'GET'
 
         }).done((resp) => {
-            tommorow.text(` Jutro: ${resp.data[0].temp} C`);
+            tommorow.text(` ${resp.data[0].temp} C`);
             tommorowImg.attr('src', `src/images/${resp.data[0].weather.icon}.svg`)
         }).fail((err)=>{
             console.log('next day forecast error');
@@ -65,7 +65,7 @@ input.keypress(function (e) {
 
         }).done((resp) => {
             console.log(resp)
-            afterTommorowDay.text(` Jutro: ${resp.data[1].temp} C`);
+            afterTommorowDay.text(` ${resp.data[1].temp} C`);
             afterTommorowDayImg.attr('src', `src/images/${resp.data[1].weather.icon}.svg`)
         }).fail((err) => {
             console.log('after next day forecast error');

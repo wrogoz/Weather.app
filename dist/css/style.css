@@ -4,14 +4,65 @@
 h2 {
   text-align: center; }
 
-.card {
-  height: 340px; }
-  .card .card-img-top {
-    height: 80%;
-    padding: 5%; }
+.card-body {
+  display: flex;
+  justify-content: center; }
+  .card-body span {
+    color: #2ea7e0;
+    opacity: 80%; }
+
+@media (max-width: 767px) {
+  .card {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 150px;
+    max-height: 150px; }
+    .card .card-img-top {
+      width: 35%; }
+    .card .card-body {
+      flex-direction: column;
+      align-items: center; }
+      .card .card-body span {
+        font-size: 36px; } }
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .card {
+    height: 300px;
+    max-height: 300px; }
+    .card .card-img-top {
+      height: 80%;
+      padding: 5%; }
+    .card .card-body {
+      flex-direction: column;
+      align-items: center; }
+      .card .card-body h4 {
+        font-size: 25px; }
+      .card .card-body span {
+        font-size: 32px; } }
+
+@media (min-width: 1280px) {
+  .card {
+    height: 300px; }
+    .card .card-body {
+      flex-direction: column;
+      align-items: center; }
+      .card .card-body span {
+        font-size: 30px;
+        margin-left: 2%; }
+    .card .card-img-top {
+      height: 80%;
+      padding: 5%; } }
 
 .app_name h1 {
   text-align: center; }
+
+.md-form input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #2ea7e0;
+  box-shadow: 0 1px 0 0 #2ea7e0; }
+
+.md-form input[type=text]:focus:not([readonly]) + label {
+  color: #2ea7e0; }
 
 .input_col {
   padding-top: 10px;
@@ -23,6 +74,13 @@ h2 {
     left: 55px; }
   .input_col #inputLGEx {
     text-align: center; }
+
+.md-form input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #2ea7e0;
+  box-shadow: 0 1px 0 0 #2ea7e0; }
+
+.md-form input[type=text]:focus:not([readonly]) + label {
+  color: #2ea7e0; }
 
 .input_col {
   padding-top: 10px;
