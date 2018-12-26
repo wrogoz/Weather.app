@@ -1,4 +1,7 @@
 @import 'modules/variables';
+#city-name{
+    min-height: 38px;
+}
 .city_name__box{
     margin-top: 3%;
 }
@@ -8,5 +11,6 @@
 @media  (max-width: 767px){
     h2{
         font-size: 24px;
+        min-height: 30px;
     }
 }
