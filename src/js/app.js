@@ -12,15 +12,13 @@ input.keypress(function (e) {
     if (e.which == 13) {
 
         //today
-
-
         let weatherbit = `https://api.weatherbit.io/v2.0/current?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017`;
         $.ajax({
-            url: weatherbit
-            ,
+            url: weatherbit,
             method: 'GET'
 
         }).done((resp) => {
+            
             thisDay.html(`  ${resp.data[0].temp} C${char}`);
             thisDayImg.attr('src', `./images/${resp.data[0].weather.icon}.svg`)
             cityName.addClass('fadeOutUp');
