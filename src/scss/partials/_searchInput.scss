@@ -13,15 +13,18 @@ box-shadow: 0 1px 0 0 $primary;
         position: absolute;
         top: 0.65rem;
         left: 55px;
-       
     }
-    label.active{
-      
-    }
-   
-    
     #inputLGEx{
         text-align: center;
         
     }
+}
+@media  (max-width: 767px){
+    .input_col{
+        label{
+            position: absolute;
+            top: 0.65rem;
+            left: 65px;
+        }
+}
 }

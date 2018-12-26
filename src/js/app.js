@@ -7,7 +7,7 @@ const tommorowImg=$('#tommorow-day__img')
 const afterTommorowDay = $('#after-tommorow-day');
 const afterTommorowDayImg = $('#after-tommorow-day__img');
 const cityName=$('#city-name');
-
+const char = '<sup>o</sup>';
 input.keypress(function (e) {
     if (e.which == 13) {
 
@@ -21,8 +21,8 @@ input.keypress(function (e) {
             method: 'GET'
 
         }).done((resp) => {
-            thisDay.text(`  ${resp.data[0].temp} C`);
-            thisDayImg.attr('src', `src/images/${resp.data[0].weather.icon}.svg`)
+            thisDay.html(`  ${resp.data[0].temp} C${char}`);
+            thisDayImg.attr('src', `./images/${resp.data[0].weather.icon}.svg`)
             cityName.addClass('fadeOutUp');
             setTimeout(function () {
                 cityName.text(`${resp.data[0].city_name}`);
@@ -50,8 +50,8 @@ input.keypress(function (e) {
             method: 'GET'
 
         }).done((resp) => {
-            tommorow.text(` ${resp.data[0].temp} C`);
-            tommorowImg.attr('src', `src/images/${resp.data[0].weather.icon}.svg`)
+            tommorow.html(` ${resp.data[0].temp} C${char}`);
+            tommorowImg.attr('src', `./images/${resp.data[0].weather.icon}.svg`)
         }).fail((err)=>{
             console.log('next day forecast error');
         })
@@ -65,8 +65,8 @@ input.keypress(function (e) {
 
         }).done((resp) => {
             console.log(resp)
-            afterTommorowDay.text(` ${resp.data[1].temp} C`);
-            afterTommorowDayImg.attr('src', `src/images/${resp.data[1].weather.icon}.svg`)
+            afterTommorowDay.html(` ${resp.data[1].temp} C${char}`);
+            afterTommorowDayImg.attr('src', `./images/${resp.data[1].weather.icon}.svg`)
         }).fail((err) => {
             console.log('after next day forecast error');
         })
