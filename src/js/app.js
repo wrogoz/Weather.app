@@ -9,8 +9,10 @@ const afterTommorowDayImg = $('#after-tommorow-day__img');
 const cityName=$('#city-name');
 const char = '<sup>o</sup>';
 input.keypress(function (e) {
+    
     if (e.which == 13) {
-
+        $(document.activeElement).blur();
+        
         //today
         let weatherbit = `https://api.weatherbit.io/v2.0/current?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017`;
         $.ajax({
