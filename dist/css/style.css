@@ -36,10 +36,10 @@ h2 {
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .card {
-    height: 260px;
-    max-height: 260px; }
+    height: 300px;
+    max-height: 300px; }
     .card .card-img-top {
-      height: 60%;
+      height: 80%;
       padding: 5%; }
     .card .card-body {
       flex-direction: column;
@@ -47,7 +47,7 @@ h2 {
       .card .card-body h4 {
         font-size: 25px; }
       .card .card-body span {
-        font-size: 26px; } }
+        font-size: 32px; } }
 
 @media (min-width: 1280px) {
   .card {
@@ -69,10 +69,6 @@ h2 {
   h1 {
     font-size: 13px; } }
 
-@media (min-width: 768px) and (max-width: 1279px) {
-  h1 {
-    font-size: 18px; } }
-
 .md-form input[type=text]:focus:not([readonly]) {
   border-bottom: 1px solid #2ea7e0;
   box-shadow: 0 1px 0 0 #2ea7e0; }
@@ -97,38 +93,9 @@ h2 {
     top: 0.65rem;
     left: 65px; } }
 
-@media (min-width: 768px) and (max-width: 1279px) {
-  .input_col label {
-    position: absolute;
-    top: 0.65rem;
-    left: 45px; } }
+html {
+  overflow-x: hidden; }
 
-.md-form input[type=text]:focus:not([readonly]) {
-  border-bottom: 1px solid #2ea7e0;
-  box-shadow: 0 1px 0 0 #2ea7e0; }
-
-.md-form input[type=text]:focus:not([readonly]) + label {
-  color: #2ea7e0; }
-
-.input_col {
-  padding-top: 10px;
-  display: flex;
-  justify-content: center; }
-  .input_col label {
-    position: absolute;
-    top: 0.65rem;
-    left: 55px; }
-  .input_col #inputLGEx {
-    text-align: center; }
-
-@media (max-width: 767px) {
-  .input_col label {
-    position: absolute;
-    top: 0.65rem;
-    left: 65px; } }
-
-@media (min-width: 768px) and (max-width: 1279px) {
-  .input_col label {
-    position: absolute;
-    top: 0.65rem;
-    left: 45px; } }
+container {
+  margin: auto;
+  width: 98%; }

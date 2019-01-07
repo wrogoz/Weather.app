@@ -18,21 +18,22 @@ input.keypress(function (e) {
             method: 'GET'
 
         }).done((resp) => {
-            
+        
             thisDay.html(`  ${resp.data[0].temp} C${char}`);
             thisDayImg.attr('src', `./images/${resp.data[0].weather.icon}.svg`)
-            cityName.addClass('fadeOutUp');
+            cityName.addClass('fadeOut');
             setTimeout(function () {
-                cityName.text(`${resp.data[0].city_name}`);
-                cityName.addClass('fadeInUpBig');
+                input.val("");
+                
                 setTimeout(function () {
-                    input.val("");
-                }, 500);
+                    cityName.text(`${resp.data[0].city_name}`);
+                    cityName.addClass('slideInUp');
+                }, 400);
                 
             }, 1000);
             setTimeout(function() {
-                cityName.removeClass('fadeInUpBig');
-                cityName.removeClass('fadeOutUp');
+                cityName.removeClass('slideInUp');
+                cityName.removeClass('fadeOut');
             }, 2000);
             
             }).fail((err) => {
