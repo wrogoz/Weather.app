@@ -8,19 +8,16 @@ const afterTommorowDay = $('#after-tommorow-day');
 const afterTommorowDayImg = $('#after-tommorow-day__img');
 const cityName=$('#city-name');
 const char = '<sup>o</sup>';
+
 input.keypress(function (e) {
-    
     if (e.which == 13) {
-        $(document.activeElement).blur();
-        
+   
         //today
         let weatherbit = `https://api.weatherbit.io/v2.0/current?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017`;
         $.ajax({
             url: weatherbit,
             method: 'GET'
-
         }).done((resp) => {
-        
             thisDay.html(`  ${resp.data[0].temp} C${char}`);
             thisDayImg.attr('src', `./images/${resp.data[0].weather.icon}.svg`)
             cityName.addClass('fadeOut');
@@ -53,19 +50,16 @@ input.keypress(function (e) {
         }).done((resp) => {
             tommorow.html(` ${resp.data[0].temp} C${char}`);
             tommorowImg.attr('src', `./images/${resp.data[0].weather.icon}.svg`)
-        }).fail((err)=>{
+        }).fail(()=>{
             console.log('next day forecast error');
         })
         //day after tommorow weather
 
         let afterTommorow = `https://api.weatherbit.io/v2.0/forecast/daily?city=${input.val()}&key=7e5cfb6fc82247268e54b66455f03017&days=2`;
         $.ajax({
-            url: afterTommorow
-            ,
+            url: afterTommorow,
             method: 'GET'
-
         }).done((resp) => {
-            console.log(resp)
             afterTommorowDay.html(` ${resp.data[1].temp} C${char}`);
             afterTommorowDayImg.attr('src', `./images/${resp.data[1].weather.icon}.svg`)
         }).fail((err) => {
