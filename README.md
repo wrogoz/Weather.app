@@ -1,6 +1,6 @@
 # Weather.app
 
-  clean look wheather app
+  Weather forecast
 
 # Technologies: 
 - jQuery
