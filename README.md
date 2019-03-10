@@ -17,7 +17,7 @@ Weather forecast for 3 days
 
 -hd rwd
 
-#S tatus
+#Status
 almost finished
 
 # Instalation:
