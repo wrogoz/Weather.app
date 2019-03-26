@@ -9,9 +9,12 @@ html{
 }
 
 
-@media  (min-width: 1900px) {
+@media  (min-width: 767px) {
     .container{
-        padding-top: 80px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        height:90vh;
     }
     
 }

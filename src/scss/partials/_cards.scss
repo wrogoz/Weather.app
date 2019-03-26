@@ -5,7 +5,7 @@
                 color:$primary;
                 opacity: 80%;
             }
-
+            padding:0;
         }
         @media  (max-width: 767px){
             .card{
@@ -32,8 +32,8 @@
         max-height: 300px;
         
         .card-img-top{
-            height: 80%;
-            padding:5%;
+            height: 68%;
+            padding:0;
             
         }
         .card-body{
@@ -64,8 +64,8 @@
             }    
             }
         .card-img-top{
-            height: 63%;
-            padding:5%;
+            height: 68%;
+            padding:0%;
             
         }
     }
