@@ -17,8 +17,6 @@ Weather forecast for 3 days
 
 -hd rwd
 
-# Status
-almost finished
 
 # Instalation:
 
